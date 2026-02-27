@@ -1,9 +1,285 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Information and References - Smart Kirana Project by Ekta Pandey">
+    <title>Contact & References - Smart Kirana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <!-- ✅ REQUIRED FIXES ONLY -->
+    <style>
+        /* Navbar emoji fix */
+        .nav-menu li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        /* 6 insight boxes in one row */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+/* Fix parent overflow */
+.glass-card {
+    overflow: hidden;
+}
+
+/* Ensure grid stays inside container */
+.insights-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent cards from stretching outside */
+.insight-card {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+        /* Responsive safety */
+        @media (max-width: 1200px) {
+            .insights-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .insights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact Us</h1>
-    <p>Email us at example@smartkirana.com</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>Smart Kirana</span>
+            </div>
+            <ul class="nav-menu">
+            <li><a href="index.html">Home 🏠</a></li>
+            <li><a href="research.html">Research 🔍</a></li>
+            <li><a href="awareness.html">Awareness 🔊</a></li>
+            <li><a href="survey.html">Survey 📝</a></li>
+            <li><a href="gallery.html">Gallery 🖼️</a></li>
+            <li><a href="chatbot.html">Chatbot 🤖</a></li>
+            <li><a href="community.html">Community 💬</a></li>
+            <li><a href="resources.html">Resources 🔗</a></li>
+            <li><a href="contact.html" class="active">Contact 📞</a></li>
+        </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/contact.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+        <div class="container">
+            <h1 class="fade-in">Contact & References</h1>
+            <p class="fade-in-delay-1">Get in Touch & Explore Our Sources</p>
+        </div>
+    </section>
+<!-- Contact Information -->
+<section class="section">
+    <div class="glass-card contact-single-card">
+
+        <!-- TOP ROW: Left Profile + Right QR -->
+        <div class="contact-top-row">
+
+            <!-- LEFT: Profile -->
+            <div class="contact-left">
+                <div class="profile-avatar">
+                    <img src="image/Myimg.png" alt="Ekta Pandey" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <i class="fas fa-user avatar-placeholder" style="display:none;"></i>
+                </div>
+                <h3>Ekta Pandey</h3>
+                <p class="profile-title">Community Engagement Project Lead</p>
+                <p class="profile-desc">A technology enthusiast focused on helping local retail businesses adopt digital tools. Committed to supporting small business owners through community-based learning and awareness.</p>
+            </div>
+
+            <!-- VERTICAL DIVIDER -->
+            <div class="contact-divider"></div>
+
+            <!-- RIGHT: QR Code -->
+            <div class="contact-right">
+                <h4>Connect on Social Media</h4>
+                <p>Scan the QR code below or click the button to visit the social media page.</p>
+                <div id="qrcode"></div>
+                <span class="scan-hint"><i class="fas fa-camera" style="margin-right:5px;"></i>Scan with your phone camera</span>
+                <a href="https://scan.page/jAu4Ot" target="_blank" class="social-link-btn">
+                    <i class="fas fa-link"></i> Click Here to Connect
+                </a>
+            </div>
+        </div>
+
+        <!-- HORIZONTAL DIVIDER -->
+        <div class="contact-horizontal-divider"></div>
+
+        <!-- BOTTOM ROW: Email, Phone, Location - full width centered -->
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <strong>Email</strong>
+                <a href="mailto:smartkirana329@gmail.com">smartkirana329@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <strong>Phone</strong>
+                <a href="tel:+91-7276-636520">+91-7276-636520</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Location</strong>
+                <span>India</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Academic References -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card">
+                <div class="section-header">
+                    <i class="fas fa-book"></i>
+                    <h2>Academic References</h2>
+                </div>
+                <p style="text-align: center; color: var(--white); margin-bottom: var(--spacing-lg);">All sources cited in this project follow APA 7th Edition formatting guidelines. References are organized alphabetically by author surname.</p>
+
+                <div class="references-list">
+                    <h3>A - S</h3>
+                    <div class="reference-item">
+                        <p>Banerjee, S., & Chakrabarty, M. (2021). Digital payment adoption in India: Determinants and impact on small businesses. <em>Journal of Financial Services Research, 59</em>(2), 187-208. https://doi.org/10.1007/s10693-020-00345-2</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <p>Ministry of Home Affairs, Cyber Crime Unit. (2023). <em>Guidelines for reporting cyber fraud</em>. Government of India. Retrieved from https://cybercrime.gov.in</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <p>National Cyber Security Centre. (2023). <em>Protecting yourself from digital payment fraud</em>. Government of India. Retrieved from https://ncsc.gov.in</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <p>National Payments Corporation of India. (2023). <em>Annual report 2022-23</em>. Retrieved from https://www.npci.org.in/what-we-do/upi/product-statistics</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <p>National Payments Corporation of India. (2024). <em>UPI security guidelines for merchants</em>. Retrieved from https://www.npci.org.in/what-we-do/upi/upi-ecosystem-statistics</p>
+                    </div>
+                    <div class="reference-item">
+                        <p>Reserve Bank of India. (2023). <em>Master direction on digital payment security controls</em>. Retrieved from https://www.rbi.org.in</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <p>Reserve Bank of India Consumer Education. (2024). <em>Be safe: Banking and payment security tips</em>. Retrieved from https://www.rbi.org.in/financialeducation/home.aspx</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <p>Retail Association of India. (2023). <em>India retail report 2023: The changing landscape of small format retail</em>. Retrieved from https://www.rai.net.in</p>
+                    </div>
+
+                    <div class="reference-item">
+                        <p>Singh, R., & Kumar, A. (2023). Impact of digital payments on small retail businesses in India: An empirical study. <em>International Journal of Retail & Distribution Management, 51</em>(4), 456-475. https://doi.org/10.1108/IJRDM-08-2022-0289</p>
+                    </div>
+                </div>
+
+                <div class="citation-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Note on Citations:</strong> All citations in this project follow APA 7th Edition guidelines. For academic integrity, proper attribution has been provided for all sources of information, data, and research findings. Any errors or omissions in citation should be reported to the project lead for correction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acknowledgments -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="glass-card">
+                <div class="section-header">
+                    <i class="fas fa-hands-helping"></i>
+                    <h2>Acknowledgments</h2>
+                </div>
+                <div class="acknowledgments-content">
+                    <p>This Community Engagement Project would not have been possible without the support and contributions of numerous individuals and organizations:</p>
+                    
+                    <ul class="acknowledgment-list">
+                        <li><strong>Participating Kirana Store Owners:</strong> Our heartfelt gratitude to the 50+ store owners who participated in the research, shared their experiences, and embraced digital transformation.</li>
+                        
+                        <li><strong>National Payments Corporation of India (NPCI):</strong> For providing technical resources, educational materials, and support for UPI adoption initiatives.</li>
+                        
+                        <li><strong>Reserve Bank of India:</strong> For comprehensive guidelines, consumer protection frameworks, and regulatory support that ensure safe digital payment ecosystems.</li>
+                        
+                        <li><strong>Digital India Initiative:</strong> For promoting digital literacy and providing the policy framework that enables projects like Smart Kirana.</li>
+                        
+                        <li><strong>Local Authorities and District Administrations:</strong> For facilitating community outreach, providing venues for workshops, and supporting grassroots implementation.</li>
+                        
+                        <li><strong>Payment Service Providers:</strong> Google Pay, PhonePe, Paytm, and other platforms for their educational resources and merchant support services.</li>
+                        
+                        <li><strong>Academic Advisors and Peer Reviewers:</strong> For methodological guidance, critical feedback, and validation of research findings.</li>
+                        </ul>
+
+                    <p class="closing-note">This project represents a collective effort to bridge the digital divide and empower local businesses. Every contribution, large or small, has been instrumental in achieving our mission of digital financial inclusion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-store"></i> Smart Kirana</h3>
+                    <p>Empowering local businesses through digital payment awareness and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="awareness.html">Awareness</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="community.html">Forum</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Kirana Project | Community Engagement Project by Ekta Pandey | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+        <script src="chatbot-widget.js"></script>
 </body>
 </html>

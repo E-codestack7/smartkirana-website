@@ -1,9 +1,339 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Media Gallery - Infographics, Posters, and Videos on Digital Payments">
+    <title>Media Gallery - Smart Kirana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="gallery.css">
+    <!-- ✅ REQUIRED FIXES ONLY -->
+    <style>
+        /* Navbar emoji fix */
+        .nav-menu li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        /* 6 insight boxes in one row */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+/* Fix parent overflow */
+.glass-card {
+    overflow: hidden;
+}
+
+/* Ensure grid stays inside container */
+.insights-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent cards from stretching outside */
+.insight-card {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+        /* Responsive safety */
+        @media (max-width: 1200px) {
+            .insights-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .insights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Gallery</h1>
-    <p>This is the gallery page.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>Smart Kirana</span>
+            </div>
+           <ul class="nav-menu">
+            <li><a href="index.html">Home 🏠</a></li>
+            <li><a href="research.html">Research 🔍</a></li>
+            <li><a href="awareness.html">Awareness 🔊</a></li>
+            <li><a href="survey.html">Survey 📝</a></li>
+            <li><a href="gallery.html" class="active">Gallery 🖼️</a></li>
+            <li><a href="chatbot.html">Chatbot 🤖</a></li>
+            <li><a href="community.html">Community 💬</a></li>
+            <li><a href="resources.html">Resources 🔗</a></li>
+            <li><a href="contact.html">Contact 📞</a></li>
+        </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/gallery.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+        <div class="container">
+            <h1 class="fade-in">Media Gallery</h1>
+            <p class="fade-in-delay-1">Educational Infographics, Awareness Posters & Video Tutorials</p>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="tab-btn active" data-category="all">
+                    <i class="fas fa-th"></i> All Media
+                </button>
+                <button class="tab-btn" data-category="infographics">
+                    <i class="fas fa-chart-pie"></i> Infographics
+                </button>
+                <button class="tab-btn" data-category="posters">
+                    <i class="fas fa-image"></i> Posters
+                </button>
+                <button class="tab-btn" data-category="videos">
+                    <i class="fas fa-video"></i> Videos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infographics Section -->
+<section class="section" id="infographics-section">
+    <div class="container">
+        <div class="glass-card">
+
+            <div class="section-header">
+                <i class="fas fa-chart-line"></i>
+                <h2>Educational Infographics</h2>
+            </div>
+
+            <div class="carousel-container">
+                <button class="carousel-btn left" onclick="prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel-track" id="carouselTrack">
+    <img src="image/digitaldelhi.jpg" onclick="openModal(0)">
+    <img src="image/modiji.jpg" onclick="openModal(1)">
+    <img src="image/mumbaiextra.jpg" onclick="openModal(2)">
+    <img src="image/newskirana.png" onclick="openModal(3)">
+    <img src="image/mumbai.jpg" onclick="openModal(4)">
+    <img src="image/kirana.jpg" onclick="openModal(5)">
+    <img src="image/payments.jpg" onclick="openModal(6)">
+    <img src="image/infographics1.png" onclick="openModal(7)">
+    <img src="image/infographics2.png" onclick="openModal(8)">
+</div>
+                <button class="carousel-btn right" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Modal Slideshow -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+   <img class="modal-content" id="modalImage" src="public/image/" alt="Preview Image">
+</div>
+
+
+    <!-- Posters Section -->
+<section class="section bg-alt" id="posters-section">
+    <div class="container">
+        <div class="glass-card">
+
+            <div class="section-header">
+                <i class="fas fa-images"></i>
+                <h2>Awareness Posters</h2>
+            </div>
+
+            <div class="carousel-container posters-carousel">
+
+                <!-- Left Arrow -->
+                <button class="carousel-btn left" onclick="prevPoster()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Carousel Track -->
+                <div class="carousel-track" id="posterTrack">
+                    <img src="image/awareness.png" onclick="openPosterModal(0)" alt="Smart Kirana Campaign">
+                    <img src="image/awareness2.png" onclick="openPosterModal(1)" alt="Go Digital with UPI">
+                    <img src="image/digitalfraud.jpg" onclick="openPosterModal(2)" alt="Fraud Awareness">
+                    <img src="image/store.jpg" onclick="openPosterModal(3)" alt="Digital Store Promotion">
+                    <img src="image/karnataka.jpg" onclick="openPosterModal(4)" alt="State Digital Initiative">
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="carousel-btn right" onclick="nextPoster()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Poster Modal -->
+<div id="posterModal" class="modal">
+    <span class="close" onclick="closePosterModal()">&times;</span>
+    <img class="modal-content" id="posterModalImage" src="public/image/" alt="Poster Preview">
+</div>
+
+    <!-- Videos Section -->
+<section class="section" id="videos-section">
+    <div class="container">
+        <div class="glass-card">
+
+            <div class="section-header">
+                <i class="fas fa-play-circle"></i>
+                <h2>Video Tutorials</h2>
+            </div>
+
+            <div class="video-carousel-container">
+
+                <button class="video-btn left" onclick="prevVideo()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="video-track" id="videoTrack">
+
+                    <!-- Video 1 -->
+                    <div class="video-slide">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/dOcq91qxQb4?si=PpkfM8bXp437lBnw" 
+                                title="Complete Guide to UPI Payments"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Complete Guide to UPI Payments</h4>
+                            <p>Step-by-step guide for Kirana store owners</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-slide">
+                        <div class="video-wrapper">
+                            <iframe 
+                               src="https://www.youtube.com/embed/i7DcdpKxPsA?si=XT9vahWhDsscZdsi" 
+                                title="Digital Payment Security Tips"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Digital Payment Security Tips</h4>
+                            <p>How to avoid fraud & secure transactions</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-slide">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/SVFg1UizPPI?si=_UM4fMS8JDUE6-sO"
+                                title="How to Generate QR Code for Payments"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Generate Payment QR Code</h4>
+                            <p>Create and print QR code for your store</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="video-slide">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/2WM1eMcP38k?si=FukvkKC8C-kWsPZ2" 
+                                title="Fix Failed UPI Transactions"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Fix Failed UPI Transactions</h4>
+                            <p>What to do if money is stuck or pending</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="video-btn right" onclick="nextVideo()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-store"></i> Smart Kirana</h3>
+                    <p>Empowering local businesses through digital payment awareness and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="awareness.html">Awareness</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="community.html">Forum</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Kirana Project | Community Engagement Project by Ekta Pandey | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+    <script src="chatbot-widget.js"></script>
 </body>
 </html>

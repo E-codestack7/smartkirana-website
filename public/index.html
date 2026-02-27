@@ -3,9 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Smart Kirana - Digital Payment Awareness for Local Businesses">
+    <meta name="author" content="Ekta Pandey">
+    <title>Smart Kirana - Digital Payment Awareness</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ✅ ONLY REQUIRED FIXES -->
+    <style>
+        /* Emoji fix: keep emoji beside text */
+        .nav-menu li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        /* Objectives: 4 boxes in one row */
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Responsive safety */
+        @media (max-width: 992px) {
+            .objectives-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .objectives-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, Smart Kirana!</h1>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-store"></i>
+            <span>Smart Kirana</span>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home 🏠</a></li>
+            <li><a href="research.html">Research 🔍</a></li>
+            <li><a href="awareness.html">Awareness 🔊</a></li>
+            <li><a href="survey.html">Survey 📝</a></li>
+            <li><a href="gallery.html">Gallery 🖼️</a></li>
+            <li><a href="chatbot.html">Chatbot 🤖</a></li>
+            <li><a href="community.html">Community 💬</a></li>
+            <li><a href="resources.html">Resources 🔗</a></li>
+            <li><a href="contact.html">Contact 📞</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/home.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+    
+    <div class="hero-content">
+        <div class="glass-card hero-card">
+            <h1>Smart Kirana</h1>
+            <h2>Digital Payment Awareness</h2>
+            <p>Empowering local Kirana stores with safe and easy digital payment solutions</p>
+            <div class="hero-buttons">
+                <a href="#introduction" class="btn btn-primary">Learn More</a>
+                <a href="survey.html" class="btn btn-secondary">Take Survey</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="section" id="introduction">
+    <div class="container">
+        <div class="glass-card">
+            <div class="section-header">
+                <i class="fas fa-info-circle"></i>
+                <h2>Introduction</h2>
+            </div>
+
+            <p style="color: #0d0d0d;">
+    <strong> Smart Kirana </strong> is a community awareness initiative focused on helping
+    small Kirana store owners understand and adopt digital payment methods.
+    As digital transactions grow rapidly in India, it is important for local
+    businesses to stay updated, confident, and secure.
+</p>
+            <p style="color: rgba(90, 17, 17, 0.9);">
+            
+
+            <div class="highlight-box">
+                <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                <p>
+                    To build awareness and confidence among Kirana store owners so they can
+                    safely use digital payment systems and improve daily business operations.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Objectives -->
+<section class="section bg-alt" id="objectives">
+    <div class="container">
+        <div class="glass-card">
+            <div class="section-header">
+                <i class="fas fa-target"></i>
+                <h2>Project Objectives</h2>
+            </div>
+
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Awareness & Education</h3>
+                    <p>Educate Kirana owners about UPI, QR codes, wallets, and POS systems.</p>
+                </div>
+
+                <div class="objective-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Digital Safety</h3>
+                    <p>Promote safe practices to prevent fraud and secure transactions.</p>
+                </div>
+
+                <div class="objective-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business Growth</h3>
+                    <p>Show how digital payments improve efficiency and customer convenience.</p>
+                </div>
+
+                <div class="objective-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Support</h3>
+                    <p>Encourage shop owners to share experiences and learn together.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scope -->
+<section class="section" id="scope">
+    <div class="container">
+        <div class="glass-card">
+            <div class="section-header">
+                <i class="fas fa-compass"></i>
+                <h2>Scope of Awareness</h2>
+            </div>
+
+            <ul>
+                <li>Focus on urban and semi-urban Kirana stores</li>
+                <li>Awareness of UPI, QR payments, wallets, and POS machines</li>
+                <li>Basic understanding of secure digital transactions</li>
+                <li>Guidance to help customers use digital payments confidently</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="glass-card cta-card">
+            <h2>Go Digital, Grow Faster 🚀</h2>
+            <p>Join the movement to empower local businesses with digital payments</p>
+            <div class="cta-buttons">
+                <a href="survey.html" class="btn btn-primary">Take Survey</a>
+                <a href="awareness.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Smart Kirana Project | By Ekta Pandey</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+    <script src="chatbot-widget.js"></script>
 </body>
 </html>
