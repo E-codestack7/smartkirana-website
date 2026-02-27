@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resources and Useful Links for Digital Payments">
+    <title>Resources - Smart Kirana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="resources.css">
+    <!-- ✅ REQUIRED FIXES ONLY -->
+    <style>
+        /* Navbar emoji fix */
+        .nav-menu li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        /* 6 insight boxes in one row */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+/* Fix parent overflow */
+.glass-card {
+    overflow: hidden;
+}
+
+/* Ensure grid stays inside container */
+.insights-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent cards from stretching outside */
+.insight-card {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+        /* Responsive safety */
+        @media (max-width: 1200px) {
+            .insights-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .insights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>Smart Kirana</span>
+            </div>
+            <ul class="nav-menu">
+            <li><a href="index.html">Home 🏠</a></li>
+            <li><a href="research.html">Research 🔍</a></li>
+            <li><a href="awareness.html">Awareness 🔊</a></li>
+            <li><a href="survey.html">Survey 📝</a></li>
+            <li><a href="gallery.html">Gallery 🖼️</a></li>
+            <li><a href="chatbot.html">Chatbot 🤖</a></li>
+            <li><a href="community.html">Community 💬</a></li>
+            <li><a href="resources.html" class="active">Resources 🔗</a></li>
+            <li><a href="contact.html">Contact 📞</a></li>
+        </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/resources.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+        <div class="container">
+            <h1 class="fade-in" style="color:white;" >Resources & Useful Links</h1>
+            <p class="fade-in-delay-1" style="color:white;">Government Portals, Helplines & Learning Resources</p>
+        </div>
+    </section>
+
+    <!-- Government Portals -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card">
+                <div class="section-header">
+                    <i class="fas fa-landmark"></i>
+                    <h2>Government Portals & Official Links</h2>
+                </div>
+                <div class="resources-grid">
+
+                    <div class="resource-card">
+                        <div class="resource-icon gov">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <h3>National Payments Corporation of India (NPCI)</h3>
+                        <p>Umbrella organization for operating retail payments and settlement systems in India. Official UPI platform operator.</p>
+                        <a href="https://www.npci.org.in" target="_blank" class="resource-link">
+                            Visit Website <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <p class="citation">National Payments Corporation of India. (2024). <em>About NPCI</em>. Retrieved from https://www.npci.org.in</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon gov">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Digital India</h3>
+                        <p>Government of India's flagship program to transform India into a digitally empowered society.</p>
+                        <a href="https://www.digitalindia.gov.in" target="_blank" class="resource-link">
+                            Visit Website <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <p class="citation">Ministry of Electronics & IT. (2024). <em>Digital India Programme</em>. Retrieved from https://www.digitalindia.gov.in</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon gov">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>National Cyber Crime Portal</h3>
+                        <p>Report cyber crimes including digital payment fraud, phishing, and online scams.</p>
+                        <a href="https://cybercrime.gov.in" target="_blank" class="resource-link">
+                            Visit Website <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <p class="citation">Ministry of Home Affairs. (2024). <em>National Cyber Crime Reporting Portal</em>. Retrieved from https://cybercrime.gov.in</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon gov">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                        <h3>BHIM (Bharat Interface for Money)</h3>
+                        <p>Government's official UPI-based payment application developed by NPCI.</p>
+                        <a href="https://www.bhimupi.org.in" target="_blank" class="resource-link">
+                            Visit Website <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <p class="citation">National Payments Corporation of India. (2024). <em>BHIM App</em>. Retrieved from https://www.bhimupi.org.in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Helplines -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="glass-card">
+                <div class="section-header">
+                    <i class="fas fa-phone-alt"></i>
+                    <h2>Emergency Helplines & Support</h2>
+                </div>
+                <div class="helplines-grid">
+
+                    <div class="helpline-card">
+                        <div class="helpline-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>NPCI Helpdesk</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> <strong>1800-120-1740</strong> (Toll-Free)</p>
+                            <p><i class="fas fa-clock"></i> 24/7 Support</p>
+                            <p><i class="fas fa-envelope"></i> support@npci.org.in</p>
+                        </div>
+                        <p class="helpline-desc">For UPI-related issues and transaction problems.</p>
+                    </div>
+
+                    <div class="helpline-card">
+                        <div class="helpline-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Cyber Crime Helpline</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> <strong>1930</strong> (National)</p>
+                            <p><i class="fas fa-clock"></i> 24/7 Support</p>
+                            <p><i class="fas fa-envelope"></i> helpline@cybercrime.gov.in</p>
+                        </div>
+                        <p class="helpline-desc">Report digital payment fraud and cyber crimes immediately.</p>
+                    </div>
+
+                    <div class="helpline-card">
+                        <div class="helpline-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Consumer Helpline</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> <strong>1800-11-4000</strong> (Toll-Free)</p>
+                            <p><i class="fas fa-clock"></i> 9:30 AM - 5:30 PM</p>
+                            <p><i class="fas fa-envelope"></i> consumerhelpline@nic.in</p>
+                        </div>
+                        <p class="helpline-desc">For consumer complaints and grievances related to digital services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Resources -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card">
+                <div class="section-header">
+                    <i class="fas fa-book-reader"></i>
+                    <h2>Learning Resources & Guides</h2>
+                </div>
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>RBI Digital Payment Guide</h4>
+                        <p>Comprehensive guide on digital payment systems in India</p>
+                        <a href="https://www.scribd.com/document/855686612/RBI-Circular-February-2025-8332" target="_blank" class="btn btn-secondary">
+                            Download PDF
+                        </a>
+                    </div>
+
+                    <div class="learning-card">
+                        <i class="fas fa-video"></i>
+                        <h4>NPCI Video Tutorials</h4>
+                        <p>Official video tutorials on UPI and digital payments</p>
+                        <a href="https://youtu.be/nveGcpiIeiI?si=v0yCD3STbcgyfD6a" target="_blank" class="btn btn-secondary">
+                            Watch Videos
+                        </a>
+                    </div>
+
+                    <div class="learning-card">
+                        <i class="fas fa-book"></i>
+                        <h4>Digital India Resources</h4>
+                        <p>Educational materials and training modules</p>
+                        <a href="https://en.wikipedia.org/wiki/Digital_India" target="_blank" class="btn btn-secondary">
+                            Access Resources
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Apps -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="glass-card">
+                <div class="section-header">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h2>Popular Payment Applications</h2>
+                </div>
+                <div class="apps-grid">
+                    <div class="app-card">
+                        <h4>Google Pay</h4>
+                        <p>Google's UPI-based payment application</p>
+                        <a href="https://pay.google.com/intl/en_in/about/" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="app-card">
+                        <h4>PhonePe</h4>
+                        <p>Digital payment platform by Walmart</p>
+                        <a href="https://www.phonepe.com" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="app-card">
+                        <h4>Paytm</h4>
+                        <p>All-in-one payment and financial services</p>
+                        <a href="https://paytm.com" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="app-card">
+                        <h4>BHIM</h4>
+                        <p>Government's official UPI app</p>
+                        <a href="https://www.bhimupi.org.in" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-store"></i> Smart Kirana</h3>
+                    <p>Empowering local businesses through digital payment awareness and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="awareness.html">Awareness</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="community.html">Forum</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Kirana Project | Community Engagement Project by Ekta Pandey | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot-widget.js"></script>
+</body>
+</html>

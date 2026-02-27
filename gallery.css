@@ -1,0 +1,314 @@
+/* Gallery Page Styles */
+.page-header {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+                url('https://images.unsplash.com/photo-1569342380852-035f42d9ca41?w=1080') center/cover;
+    margin-top: 70px;
+    text-align: center;
+}
+/* ===== Gallery Page Header Fix ===== */
+
+.page-header {
+    position: relative;
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+    color: #ffffff;
+}
+
+/* Stronger overlay */
+.page-header {
+    position: relative !important;
+    overflow: hidden !important;
+}
+.page-header .container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.page-header h1 {
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.page-header p {
+    color: #f1f5f9;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.gallery-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+/* ===== Carousel ===== */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;            /* You can adjust */
+    margin: 30px 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: contain;      /* 👈 Important */
+   background: rgba(255, 255, 255, 0.08);
+   backdrop-filter: blur(8px);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.carousel-track img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 22px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+
+}
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 300px;
+    }
+}
+
+
+.carousel-btn.left { left: 10px; }
+.carousel-btn.right { right: 10px; }
+
+/* ===== Modal Slideshow ===== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-normal);
+}
+
+.gallery-item:hover .gallery-image img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-btn {
+    background: var(--accent-color);
+    border: none;
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.gallery-btn:hover {
+    background: var(--accent-dark);
+    transform: scale(1.05);
+}
+
+.gallery-info {
+    padding: var(--spacing-md);
+}
+
+.gallery-info h4 {
+    color: var(--white);
+    margin-bottom: var(--spacing-xs);
+}
+
+.gallery-info p {
+    color: var(--light-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ===== VIDEO CAROUSEL ===== */
+
+.video-carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.video-slide {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.video-info {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--white);
+}
+
+.video-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+.video-item:hover.video-overlay {
+    opacity: 1;
+}
+.video-btn:hover {
+    background: var(--secondary-color);
+}
+
+.video-btn.left {
+    left: 10px;
+}
+
+.video-btn.right {
+    right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.page-header {
+    min-height: 60vh !important;
+}

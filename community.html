@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community Forum for Digital Payment Discussion - Smart Kirana">
+    <title>Community Forum - Smart Kirana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="community.css">
+    <style>
+        /* Navbar emoji fix */
+        .nav-menu li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        /* 6 insight boxes in one row */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+
+        /* Fix parent overflow */
+        .glass-card {
+            overflow: hidden;
+        }
+
+        /* Ensure grid stays inside container */
+        .insights-grid {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Prevent cards from stretching outside */
+        .insight-card {
+            min-width: 0;
+            box-sizing: border-box;
+        }
+
+        /* Responsive safety */
+        @media (max-width: 1200px) {
+            .insights-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .insights-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .insights-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>Smart Kirana</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home 🏠</a></li>
+                <li><a href="research.html">Research 🔍</a></li>
+                <li><a href="awareness.html">Awareness 🔊</a></li>
+                <li><a href="survey.html">Survey 📝</a></li>
+                <li><a href="gallery.html">Gallery 🖼️</a></li>
+                <li><a href="chatbot.html">Chatbot 🤖</a></li>
+                <li><a href="community.html" class="active">Community 💬</a></li>
+                <li><a href="resources.html">Resources 🔗</a></li>
+                <li><a href="contact.html">Contact 📞</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/community.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+        <div class="container">
+            <h1 class="fade-in">Community Forum</h1>
+            <p class="fade-in-delay-1">Share Experiences, Ask Questions, and Learn Together</p>
+        </div>
+    </section>
+
+    <!-- Forum Introduction -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card">
+                <div class="forum-intro">
+                    <i class="fas fa-users"></i>
+                    <h2>Join the Conversation</h2>
+                    <p>Connect with fellow Kirana store owners, share your digital payment experiences, ask questions, and learn from the community. Together, we can navigate the digital transformation of small-scale retail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discussion Categories -->
+
+    <!-- ===================== BLOG SECTION ===================== -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card">
+
+                <div class="section-header">
+                    <i class="fas fa-newspaper"></i>
+                    <h2>Latest Blog Post</h2>
+                </div>
+
+                <div class="blog-card-wrapper">
+
+                    <!-- Blog Header -->
+                    <!-- Blog Header -->
+                    <div class="blog-card-header">
+                        <div class="blog-card-meta">
+                            <span class="blog-badge">Digital Payments</span>
+                            <span class="blog-date">
+                                <i class="fas fa-calendar-alt"></i> February 23, 2026
+                            </span>
+                        </div>
+                        <h3>Community Awareness Blog</h3>
+                    </div>
+
+                    <!-- Blog Body -->
+                    <div class="blog-card-body">
+
+                        <p class="blog-summary">
+                            This initiative aims to spread awareness among local kirana store owners about the benefits of adopting digital payment methods. Going cashless helps small businesses maintain better transaction records, reduce risks of handling cash, and offer greater convenience to customers — ultimately building trust and enabling growth in the digital economy.
+                        </p>
+                        <div class="blog-embed">
+    <iframe 
+        src="https://ektacepdigitalkirana.blogspot.com/2026/02/smart-kirana-community-awareness-on.html"
+        title="Smart Kirana Community Awareness Blog"
+        loading="lazy"
+        width="100%"
+        height="600"
+        style="border: none; border-radius: 12px;">
+        Loading…
+    </iframe>
+</div>
+
+                        <a href="https://ektacepdigitalkirana.blogspot.com/2026/02/smart-kirana-community-awareness-on.html"
+                           target="_blank" class="blog-read-btn">
+                            <i class="fas fa-external-link-alt"></i> Read Full Blog
+                        </a>
+
+                        </div><!-- end blog-comments-section -->
+                    </div><!-- end blog-card-body -->
+                </div><!-- end blog-card-wrapper -->
+
+            </div>
+    </section>
+    <!-- =================== END BLOG SECTION =================== -->
+
+    <!-- Community Guidelines -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="glass-card">
+                <div class="section-header">
+                    <i class="fas fa-book-open"></i>
+                    <h2>Community Guidelines</h2>
+                </div>
+                <div class="guidelines">
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Be Respectful</h4>
+                            <p>Treat all community members with respect and courtesy. Different perspectives enrich our discussions.</p>
+                        </div>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Stay On Topic</h4>
+                            <p>Keep discussions relevant to digital payments, business practices, and community support.</p>
+                        </div>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Share Responsibly</h4>
+                            <p>Don't share sensitive personal information like bank details, PINs, or passwords.</p>
+                        </div>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Help Others</h4>
+                            <p>Share your knowledge and experiences to help fellow community members.</p>
+                        </div>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Report Issues</h4>
+                            <p>If you encounter inappropriate content or behavior, report it to our moderators.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-store"></i> Smart Kirana</h3>
+                    <p>Empowering local businesses through digital payment awareness and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="awareness.html">Awareness</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="community.html">Forum</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Kirana Project | Community Engagement Project by Ekta Pandey | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="community.js"></script>
+    <script src="chatbot-widget.js"></script>
+</body>
+</html>

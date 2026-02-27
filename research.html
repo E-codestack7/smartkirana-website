@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research Findings on Digital Payment Adoption in Kirana Stores">
+    <title>Research Findings - Smart Kirana</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="research.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+
+    <!-- ✅ REQUIRED FIXES ONLY -->
+    <style>
+        /* Navbar emoji fix */
+        .nav-menu li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        /* 6 insight boxes in one row */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+/* Fix parent overflow */
+.glass-card {
+    overflow: hidden;
+}
+
+/* Ensure grid stays inside container */
+.insights-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent cards from stretching outside */
+.insight-card {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+        /* Responsive safety */
+        @media (max-width: 1200px) {
+            .insights-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .insights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-store"></i>
+            <span>Smart Kirana</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home 🏠</a></li>
+            <li><a href="research.html" class="active">Research 🔍</a></li>
+            <li><a href="awareness.html">Awareness 🔊</a></li>
+            <li><a href="survey.html">Survey 📝</a></li>
+            <li><a href="gallery.html">Gallery 🖼️</a></li>
+            <li><a href="chatbot.html">Chatbot 🤖</a></li>
+            <li><a href="community.html">Community 💬</a></li>
+            <li><a href="resources.html">Resources 🔗</a></li>
+            <li><a href="contact.html">Contact 📞</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+    <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/research.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+    <div class="container">
+        <h1 class="fade-in">Research Findings</h1>
+        <p class="fade-in-delay-1">Analysis of Digital Payment Adoption in Kirana Stores</p>
+    </div>
+</section>
+
+<!-- Abstract -->
+<section class="section">
+    <div class="container">
+        <div class="glass-card">
+            <div class="section-header">
+                <i class="fas fa-file-alt"></i>
+                <h2>Abstract</h2>
+            </div>
+
+            <p><strong>Background:</strong> Digital payments have grown rapidly in India, but adoption among Kirana stores remains uneven.</p>
+
+            <p><strong>Objective:</strong> This study examines factors affecting digital payment adoption and its impact on small retail businesses.</p>
+
+            <p><strong>Methods:</strong> A survey of 500 Kirana stores in tier 2 and tier 3 cities was conducted using questionnaires and interviews.</p>
+
+            <p><strong>Results:</strong> About 62% of stores adopted digital payments, mainly UPI. Ease of use, customer demand, and incentives were key drivers (p &lt; 0.001), while fees and security concerns were major barriers.</p>
+
+            <p><strong>Conclusion:</strong> Focused awareness and training programs can significantly improve digital payment adoption among Kirana stores.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Key Insights -->
+<section class="section bg-alt">
+    <div class="container">
+        <div class="glass-card">
+            <div class="section-header">
+                <i class="fas fa-lightbulb"></i>
+                <h2>Key Research Insights</h2>
+            </div>
+
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-number">62%</div>
+                    <h4>Adoption Rate</h4>
+                    <p>Stores using digital payments</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">48%</div>
+                    <h4>UPI Usage</h4>
+                    <p>Most preferred method</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">23%</div>
+                    <h4>Satisfac-tion</h4>
+                    <p>Customer satisfaction increase</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">54%</div>
+                    <h4>Fee Concern</h4>
+                    <p>Main adoption barrier</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">15%</div>
+                    <h4>Growth</h4>
+                    <p>Transaction volume rise</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">37%</div>
+                    <h4>Security</h4>
+                    <p>Security-related concerns</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+<script src="research.js"></script>
+
+<!-- Charts and Graphs Section -->
+<section class="section">
+    <div class="container">
+        <div class="glass-card">
+            <div class="section-header">
+                <i class="fas fa-chart-bar"></i>
+                <h2>Data Visualization</h2>
+            </div>
+            
+            <div class="charts-grid">
+                
+                <!-- Chart Image -->
+                <img src="image/Chart.png" 
+                     alt="Digital Payment Adoption Chart" 
+                     class="chart-image">
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Download Section -->
+<section class="section">
+    <div class="container">
+        <div class="glass-card">
+
+            <div class="section-header">
+                <i class="fas fa-file-pdf"></i>
+                <h2>Research Paper Preview</h2>
+            </div>
+
+            <!-- Scrollable PDF Container -->
+            <div id="pdf-preview-container">
+                <div id="pdf-preview"></div>
+            </div>
+        <!-- Read More Button -->
+       <p class="pdf-note">
+                If you want to read the full research paper, please download it.
+            </p>
+
+            <div class="pdf-buttons">
+                <a href="SmartKirana.pdf"
+                   download="SmartKirana_Full_Paper.pdf"
+                   class="btn btn-primary">
+                    <i class="fas fa-download"></i> Download Full Paper
+                </a>
+
+                <a href="https://forms.gle/YXe29JRhMbF2acPY8"
+                   target="_blank"
+                   class="btn btn-secondary">
+                    <i class="fas fa-edit"></i> Fill Google Form
+                </a>
+            </div>
+                </div>
+            </div>
+               </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-store"></i> Smart Kirana</h3>
+                    <p>Empowering local businesses through digital payment awareness and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="awareness.html">Awareness</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="community.html">Forum</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Kirana Project | Community Engagement Project by Ekta Pandey | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="research.js"></script>
+    <script src="chatbot-widget.js"></script>
+</body>
+</html>

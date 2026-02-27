@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Chatbot for Digital Payment Queries - Smart Kirana">
+    <title>Chatbot - Smart Kirana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chatbot.css">
+    <!-- ✅ REQUIRED FIXES ONLY -->
+    <style>
+        /* Navbar emoji fix */
+        .nav-menu li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        /* 6 insight boxes in one row */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+/* Fix parent overflow */
+.glass-card {
+    overflow: hidden;
+}
+
+/* Ensure grid stays inside container */
+.insights-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent cards from stretching outside */
+.insight-card {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+        /* Responsive safety */
+        @media (max-width: 1200px) {
+            .insights-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .insights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>Smart Kirana</span>
+            </div>
+           <ul class="nav-menu">
+            <li><a href="index.html">Home 🏠</a></li>
+            <li><a href="research.html">Research 🔍</a></li>
+            <li><a href="awareness.html">Awareness 🔊</a></li>
+            <li><a href="survey.html">Survey 📝</a></li>
+            <li><a href="gallery.html">Gallery 🖼️</a></li>
+            <li><a href="chatbot.html" class="active">Chatbot 🤖</a></li>
+            <li><a href="community.html">Community 💬</a></li>
+            <li><a href="resources.html">Resources 🔗</a></li>
+            <li><a href="contact.html">Contact 📞</a></li>
+        </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/chatbot.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+        <div class="container">
+            <h1 class="fade-in"><i class="fas fa-robot"></i> Smart Kirana Assistant</h1>
+            <p class="fade-in-delay-1" style="color:white;">
+    Get instant answers to your digital payment queries
+</p>
+
+        </div>
+    </section>
+
+    <!-- Floating Chat Button -->
+<!-- Floating Chat Button -->
+<button id="chatToggle" class="chat-toggle">
+    Smart Bot 🤖
+</button>
+
+<!-- Chat Window -->
+<div id="chatBox" class="chat-box">
+
+    <div class="chat-header">
+        <span>Smart Kirana Assistant</span>
+        <button onclick="toggleChat()">✖</button>
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+    </div>
+
+    <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Ask something...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+
+    </div>
+
+        <!-- FAQ Item -->
+        <section class="faq-section">
+    <div class="faq-container">
+        <div class="faq-sidebar glass-card">
+    <div class="faq-accordion">
+ <h3>
+        <i class="fas fa-question-circle"></i>
+        Frequently Asked Questions
+    </h3>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>1. What is UPI?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                UPI is a digital payment system that allows instant bank-to-bank transfers using a mobile phone.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>2. What is the daily UPI limit?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                The UPI limit is generally ₹1,00,000 per day depending on your bank.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>3. How do I generate a QR code?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Open your UPI app, go to the Receive Money section and download your personal QR code.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>4. Is UPI safe?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes, UPI is safe if you never share your PIN or OTP with anyone.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>5. What to do if transaction fails?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Most failed transactions are refunded within 5-7 working days.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>6. Can I use multiple UPI apps?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes, you can use multiple UPI apps linked to the same bank account.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>7. What is UPI ID?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                UPI ID is your unique payment address like mobilenumber@bank.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>8. How to block UPI?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                You can block UPI by contacting your bank or disabling it in app settings.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>9. Are there transaction charges?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                UPI transactions are generally free for customers.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>10. What to do if scammed?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Contact your bank immediately and report fraud at cybercrime.gov.in.
+            </div>
+        </div>
+            </div>
+    </div>
+            </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-store"></i> Smart Kirana</h3>
+                    <p>Empowering local businesses through digital payment awareness and education.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="awareness.html">Awareness</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="survey.html">Survey</a></li>
+                        <li><a href="community.html">Forum</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Kirana Project | Community Engagement Project by Ekta Pandey | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
