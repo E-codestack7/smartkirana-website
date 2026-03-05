@@ -1,2 +1,9 @@
+# Allow all robots
 User-agent: *
-Disallow: /
+Allow: /
+
+# Sitemap location
+Sitemap: https://e-codestack7.github.io/smartkirana-website/sitemap.xml
+
+# Crawl delay (wait 1 second between requests)
+Crawl-delay: 1
